@@ -1,0 +1,560 @@
+
+/* latin Fontface */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* Universal styles */
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  color: grey;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+h1 {
+  color: dimgrey;
+  font-weight: 600;
+}
+
+.container {
+  padding-left: 24px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .container {
+    padding: 0;
+  }
+}
+
+/* Header section */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  margin-right: 24px;
+}
+
+.topbar {
+  display: flex;
+  align-items:center;
+}
+
+.desktop-topbar {
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 32px;
+}
+
+.mobile-topbar {
+  display: none;
+}
+
+div.topbar img {
+  height: 1.5em;
+}
+
+span.title-first {
+  color: darkslategrey;
+}
+
+span.title-second {
+  color: lightgrey;
+}
+
+nav ul li {
+    display: inline;
+    padding: 0 16px;
+    color: dimgrey;
+    font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .desktop-topbar, nav {
+    display: none;
+  }
+
+  .mobile-topbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-size: 24px;
+  }
+}
+
+/* Jumbotron section */
+
+.banner {
+  display: flex;
+  background-color: lightgrey;
+}
+
+.learn-image {
+  padding: 32px 24px 32px 0;
+  width: 60%;
+}
+
+.learn-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.learn-text-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+.learn-text-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  width: 70%;
+}
+
+span.learn-title {
+  color: darkslategrey;
+  font-size: 2.75rem;
+  font-weight: bold;
+}
+
+.learn-text-contents h4 {
+  font-size: 1.75rem;
+}
+
+.start {
+  display: block;
+  width: 100%;
+  padding: 8px 0;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  background-color: dimgrey;
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .learn-image {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .learn-text-container {
+    width: 100%;
+  }
+
+  .learn-text-contents {
+    margin: 32px 16px 32px 16px;
+    width: 100%;
+  }
+
+  span.learn-title {
+    font-size: 3.5rem;
+    line-height: 1.25;
+  }
+
+  .learn-text-contents h4 {
+    margin: 32px 0 24px 0;
+    font-size: 1.5rem;
+  }
+}
+
+/* Keep practicing section */
+
+.information-main {
+  display: flex;
+}
+
+.practice-side {
+  padding: 32px 24px 32px 0;
+}
+
+.practice-side-border {
+  width: 60%;
+  border-right: 1px solid lightgrey;
+}
+
+.practice-side img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.practice-text h1 {
+  margin-top: 32px;
+  margin-bottom: 24px;
+  font-size: 2.5rem;
+}
+
+.practice-text p {
+  line-height: 1.5rem;
+}
+
+cite#signed {
+  padding-top: 50px;
+  display: block;
+  font-size: 0.85rem;
+}
+
+.information-items-side {
+  width: 40%;
+  height: 100%;
+}
+
+.information-item {
+  display: flex;
+}
+
+.information-item-image {
+  width: 35%;
+}
+
+.information-item-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.information-item-image img.desktop {
+  display: block;
+}
+
+.information-item-image img.mobile {
+  display: none;
+}
+
+.information-item-detail {
+  display: flex;
+  width: 65%;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 2rem;
+  padding-left: 16px;
+}
+
+.information-item-detail h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.information-item-detail a {
+  color: blue;
+  text-decoration: none;
+  text-align: left;
+}
+
+.orientation-date {
+  padding: 32px 0 16px 16px;
+  margin-bottom: 1px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.our-campus {
+  border-top: 1px solid lightgrey;
+  padding: 16px 0 16px 16px;
+}
+
+.guest-lecture {
+  background-color: lightgrey;
+  padding: 16px 0 16px 16px;
+}
+
+.guest-lecture .information-item-detail h4.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .practice-side, .practice-side-border {
+    display: none;
+  }
+
+  .information-items-side {
+    width: 100%;
+  }
+
+  .information-item {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: none;
+    padding: 0 16px;
+  }
+
+  .information-item-image {
+    width: 100%;
+    margin: 0;
+  }
+
+  .information-item-image img.desktop {
+    display: none;
+  }
+
+  .information-item-image img.mobile {
+    display: block;
+  }
+
+  .information-item-detail {
+    padding: 16px 0 0 16px;
+  }
+
+  .our-campus {
+    margin-top: 64px;
+  }
+
+  .guest-lecture {
+    margin: 64px 0 32px 0;
+    background-color: white;
+  }
+
+  .guest-lecture .information-item-detail h4.desktop {
+    display: none;
+  }
+
+  .guest-lecture .information-item-detail h4.mobile {
+    display: flex;
+  }
+}
+
+/* Start learning section */
+
+.start-learning {
+  background-color: lightgrey;
+  padding-bottom: 32px;
+}
+
+.start-learning h1 {
+  padding: 32px 0 16px 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.course {
+  margin: 16px;
+  background-color: white;
+}
+
+.course-desc {
+  padding: 16px 0 24px 16px;
+}
+
+.course-desc h4{
+  padding-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.course-desc span {
+  display: block;
+  padding-bottom: 8px;
+  line-height: 1.5rem;
+}
+
+.rows {
+  margin: 0 56px;
+}
+
+.row-one, .row-two {
+  display: flex;
+}
+
+.rows img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .start-learning h1 {
+    padding-top: 32px;
+    padding-bottom: 16px;
+  }
+
+  .row-one, .row-two {
+    flex-direction: column;
+  }
+
+  .start-learning img, .start-learning span  {
+    display: none;
+  }
+
+  .start-learning {
+    padding-bottom: 20px;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+  }
+
+  .start-learning h4 {
+    background-color: lightgrey;
+  }
+
+  .rows {
+    margin: 0;
+  }
+
+  .course {
+    margin: 0px;
+    margin-bottom: 8px;
+  }
+
+  .course-desc {
+    padding: 0;
+    margin: 0 16px;
+  }
+
+  .course-desc h4{
+    padding: 16px 0 24px 16px;
+    font-size: 1.5rem;
+  }
+}
+
+/* Thesis exhibit section */
+
+.thesis-content {
+  display: flex;
+}
+
+.thesis-video-side {
+  width: 60%;
+}
+
+.reimagine-urban h4 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.reimagine-urban p {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+}
+
+.thesis-content-side {
+  width: 40%;
+  margin: 0 5px 0px 24px;
+}
+
+.thesis-side {
+  display: flex;
+}
+
+.thesis-grey {
+  background-color: lightgrey;
+}
+
+.thesis-image {
+  width: 35%;
+  padding: 16px;
+}
+
+.thesis-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.thesis-side-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thesis-side-desc h4 {
+  display: block;
+  padding-bottom: 8px;
+  font-size: 1.5rem;
+}
+
+.thesis-video video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.thesis-exhibit h1 {
+  text-align: center;
+  padding: 32px 0;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .thesis-content-side, .reimagine-urban {
+    display: none;
+  }
+
+  .thesis-exhibit h1 {
+    padding-bottom: 16px;
+  }
+
+  .thesis-video-side {
+    width: 100%;
+  }
+
+  .thesis-exhibit.container {
+    margin: 0;
+    padding-left: 0px;
+  }
+}
+
+/* Footer section */
+
+footer {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-top: 1px solid grey;
+  color: grey;
+}
+
+footer span a {
+  color: grey;
+  text-decoration: none;
+  margin: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+
+  footer {
+    margin-top: 24px;
+  }
+}
